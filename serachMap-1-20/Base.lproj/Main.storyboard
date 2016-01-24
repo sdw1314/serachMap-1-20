@@ -1,25 +1,85 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="serachMap_1_20" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="xcy-ff-isT"/>
+                        <viewControllerLayoutGuide type="bottom" id="e9p-Si-t3F"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMl-ow-WNp">
+                                <rect key="frame" x="140" y="514" width="40" height="40"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="nrp-a9-m7z"/>
+                                    <constraint firstAttribute="height" constant="40" id="qTs-qU-pSi"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="1"/>
+                                <connections>
+                                    <action selector="btnMenuClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w4J-WD-cOR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDf-QF-Duj">
+                                <rect key="frame" x="145" y="456" width="30" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.32917144809999999" green="0.17405999" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="旅馆">
+                                    <color key="titleColor" red="0.089694506980000005" green="0.5313981982" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGI-jf-g8I">
+                                <rect key="frame" x="145" y="456" width="30" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.18782321060000001" green="1" blue="0.14424940289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="超市">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txW-fv-Tho">
+                                <rect key="frame" x="145" y="456" width="30" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="医院">
+                                    <color key="titleColor" red="0.90431034480000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="txW-fv-Tho" firstAttribute="leading" secondItem="VGI-jf-g8I" secondAttribute="leading" id="3aq-0f-2BK"/>
+                            <constraint firstItem="CMl-ow-WNp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gio-Ts-hxN"/>
+                            <constraint firstItem="VGI-jf-g8I" firstAttribute="baseline" secondItem="txW-fv-Tho" secondAttribute="baseline" id="JAf-ru-INo"/>
+                            <constraint firstItem="VGI-jf-g8I" firstAttribute="centerX" secondItem="CMl-ow-WNp" secondAttribute="centerX" id="Xuk-xC-cIT"/>
+                            <constraint firstItem="CMl-ow-WNp" firstAttribute="top" secondItem="VGI-jf-g8I" secondAttribute="bottom" constant="28" id="leZ-bW-aXB"/>
+                            <constraint firstItem="VGI-jf-g8I" firstAttribute="baseline" secondItem="oDf-QF-Duj" secondAttribute="baseline" id="lz2-Kf-1GA"/>
+                            <constraint firstItem="oDf-QF-Duj" firstAttribute="leading" secondItem="VGI-jf-g8I" secondAttribute="leading" id="orN-On-EbS"/>
+                            <constraint firstItem="e9p-Si-t3F" firstAttribute="top" secondItem="CMl-ow-WNp" secondAttribute="bottom" constant="14" id="uCY-eS-fH3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bt1" destination="oDf-QF-Duj" id="p2u-qR-sTf"/>
+                        <outlet property="bt2" destination="txW-fv-Tho" id="eyY-xH-FQ2"/>
+                        <outlet property="bt3" destination="VGI-jf-g8I" id="nyT-HL-eE0"/>
+                        <outlet property="btMenu" destination="CMl-ow-WNp" id="JTI-9g-v9m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="162" y="343"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="512" height="512"/>
+    </resources>
 </document>
